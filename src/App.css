@@ -1,0 +1,486 @@
+/* Full screen center */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2,
+    #ff758c,
+    #42e695
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+}
+
+/* Card */
+.login-card {
+  background: white;
+  padding: 30px;
+  width: 320px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Inputs */
+.login-card input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Buttons */
+.login-card button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-card button:hover {
+  background: #5a67d8;
+}
+
+/* Error */
+.error-text {
+  color: red;
+  font-size: 14px;
+}
+
+/* Logout button */
+.logout-btn {
+  background: #ff4d4d;
+}
+
+/* Note */
+.login-note {
+  margin-top: 10px;
+  font-size: 13px;
+  color: gray;
+}
+
+/* Animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* =========================
+   GLOBAL STYLES
+========================= */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+}
+
+button {
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+.center {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+}
+
+.center h2 {
+  margin-bottom: 20px;
+}
+
+.center button {
+  background: #ffcc00;
+  color: black;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+}
+
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav button {
+  background: #1be7ff;
+  color: black;
+}
+
+/* =========================
+   PRODUCTS PAGE
+========================= */
+input, select {
+  padding: 8px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Product Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Product Card */
+.card {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.card img {
+  height: 150px;
+  width: 100%;
+  object-fit: contain;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  font-size: 14px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.card p {
+  color: #222;
+  font-weight: bold;
+}
+
+.card button:first-of-type {
+  background: #00c9ff;
+  color: black;
+}
+
+.card button:last-of-type {
+  background: #f857a6;
+  color: white;
+}
+
+/* =========================
+   PRODUCT DETAILS PAGE
+========================= */
+.details {
+  display: flex;
+  gap: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #84fab0, #8fd3f4);
+  margin: 20px;
+  border-radius: 12px;
+}
+
+.details img {
+  width: 300px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.details h2 {
+  color: #2c3e50;
+}
+
+.details p {
+  margin: 10px 0;
+}
+
+.details button {
+  margin-right: 10px;
+  background: #ff9a9e;
+  color: black;
+}
+
+/* =========================
+   CART PAGE
+========================= */
+.cart-page {
+  padding: 20px;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+}
+
+.cart-page div {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.cart-page img {
+  margin-right: 10px;
+}
+
+.cart-page button {
+  margin-left: auto;
+  background: #ff416c;
+  color: white;
+}
+
+/* =========================
+   WISHLIST PAGE
+========================= */
+.wishlist-page {
+  padding: 20px;
+  background: linear-gradient(to right, #a18cd1, #fbc2eb);
+}
+
+.wishlist-page div {
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wishlist-page button {
+  background: #6a11cb;
+  color: white;
+}
+
+/* =========================
+   DASHBOARD PAGE
+========================= */
+.dashboard {
+  padding: 30px;
+  background: linear-gradient(to right, #43e97b, #38f9d7);
+  text-align: center;
+}
+
+.dashboard h3 {
+  background: white;
+  padding: 15px;
+  margin: 10px auto;
+  width: 300px;
+  border-radius: 10px;
+  color: #2c3e50;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .details {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* =======================
+   DARK MODE
+======================= */
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* Navbar */
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+}
+
+/* Links */
+body.dark-mode a {
+  color: white;
+}
+
+/* Buttons */
+body.dark-mode button {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+/* Cards */
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+/* Inputs & Select */
+body.dark-mode input,
+body.dark-mode select {
+  background-color: #222;
+  color: white;
+  border: 1px solid #555;
+}
+
+/* ================================
+   PRODUCT CAROUSEL
+================================ */
+
+/* ===================== Hero Banner ===================== */
+.hero-banner {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ===================== Product Carousel ===================== */
+.product-carousel-section {
+  padding: 10px 20px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.carousel-card {
+  flex: 0 0 calc(100% / 5 - 12px); /* 5 cards per slide */
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carousel-card h4 {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.carousel-card p {
+  font-weight: bold;
+  margin: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.carousel-btn.prev {
+  left: 5px;
+}
+.carousel-btn.next {
+  right: 5px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 1200px) {
+  .carousel-card {
+    flex: 0 0 calc(100% / 4 - 12px);
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-card {
+    flex: 0 0 calc(100% / 3 - 12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    flex: 0 0 calc(100% / 2 - 12px);
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-card {
+    flex: 0 0 calc(100% - 12px);
+  }
+}
+
+/* 🌙 Dark Mode Support */
+.dark-mode .carousel-card {
+  background: #1f1f1f;
+  color: white;
+}
+
+/* 📱 Mobile responsive spacing */
+@media (max-width: 576px) {
+  .carousel-row {
+    gap: 10px;
+  }
+}
