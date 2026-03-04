@@ -1,17 +1,8 @@
 import { useEffect, useState } from "react";
-<<<<<<< HEAD
 import { useLocation, useNavigate } from "react-router-dom";
-
-function Cart() {
-  const [cart, setCart] = useState([]);
-  const navigate = useNavigate();
-
-=======
-import {useLocation,useNavigate } from "react-router-dom";
 function Cart() {
   const [cart, setCart] = useState([]);
    const navigate = useNavigate();
->>>>>>> 070efdff25ed491fc63ae7506b9dacfe4d69462e
   // Load cart from localStorage when component mounts
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -64,11 +55,7 @@ function Cart() {
           </div> 
         ))
       )}
-<<<<<<< HEAD
-       <button className="btn btn-primary mt-6" onClick={() => navigate("/productList")}>Go Home</button>
-=======
       <button className="btn btn-primary mt-6" onClick={() => navigate("/productList")}>Go Home</button>
->>>>>>> 070efdff25ed491fc63ae7506b9dacfe4d69462e
     </div>
   );
 }
