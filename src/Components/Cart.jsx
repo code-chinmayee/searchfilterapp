@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Cart() {
   const [cart, setCart] = useState([]);
+  const navigate = useNavigate();
 
   // Load cart from localStorage when component mounts
   useEffect(() => {
@@ -55,6 +57,7 @@ function Cart() {
           </div>
         ))
       )}
+       <button className="btn btn-primary mt-6" onClick={() => navigate("/productList")}>Go Home</button>
     </div>
   );
 }
