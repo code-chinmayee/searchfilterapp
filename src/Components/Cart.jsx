@@ -52,9 +52,10 @@ function Cart() {
             >
               Remove
             </button>
-          </div>
+          </div> 
         ))
       )}
+      <button className="btn btn-primary mt-6" onClick={() => navigate("/productList")}>Go Home</button>
     </div>
   );
 }
